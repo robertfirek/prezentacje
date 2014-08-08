@@ -1,0 +1,341 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+    Now here is when interesting things start to appear.
+
+    We set up <body> styles with default font and nice gradient in the background.
+    And yes, there is a lot of repetition there because of -prefixes but we don't
+    want to leave anybody behind.
+*/
+body {
+    font-family: 'Audiowide';
+    min-height: 740px;
+    
+    background-image: url("../img/natural_paper.png");
+}
+
+
+b, strong { font-weight: bold }
+i, em { font-style: italic }
+
+a {
+    color: inherit;
+    text-decoration: none;
+    padding: 0 0.1em;
+    text-shadow: -2px -2px 1px rgba(100,100,100,0.9);
+
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+a:hover,
+a:focus {
+    text-shadow: -2px -2px 1px rgba(100,100,100,0.5);
+}
+
+.fallback-message {
+    font-family: sans-serif;
+    line-height: 1.3;
+
+    width: 780px;
+    padding: 10px 10px 0;
+    margin: 20px auto;
+
+    border: 1px solid #E4C652;
+    border-radius: 10px;
+    background: #EEDC94;
+}
+
+.fallback-message p {
+    margin-bottom: 10px;
+}
+
+.impress-supported .fallback-message {
+    display: none;
+}
+
+.step {
+    position: relative;
+    width: 900px;
+    padding: 40px;
+    margin: 20px auto;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+
+    font-family: 'Audiowide';
+    font-size: 48px;
+    line-height: 1.5;
+}
+
+.step h1 {
+    font-size: 64px;
+    padding-bottom:10px;
+    text-align: center;
+}
+/*
+    ... and we enhance the styles for impress.js.
+
+    Basically we remove the margin and make inactive steps a little bit transparent.
+*/
+.impress-enabled .step {
+    margin: 0;
+    opacity: 0;
+
+    -webkit-transition: opacity 2s;
+    -moz-transition:    opacity 2s;
+    -ms-transition:     opacity 2s;
+    -o-transition:      opacity 2s;
+    transition:         opacity 2s;
+}
+
+.impress-enabled .step.active { opacity: 1 }
+
+.slide {
+    display: block;
+
+    width: 900px;
+    height: 700px;
+    padding: 40px 60px;
+
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+
+    font-family: 'Gloria Hallelujah';
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -1px;
+}
+
+.slide q {
+    display: block;
+    font-size: 50px;
+    line-height: 72px;
+
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.slide q strong {
+    white-space: nowrap;
+}
+
+/*
+    And now we start to style each step separately.
+
+    I agree that this may be not the most efficient, object-oriented and
+    scalable way of styling, but most of steps have quite a custom look
+    and typography tricks here and there, so they had to be styled separately.
+
+    First is the title step with a big <h1> (no room for padding) and some
+    3D positioning along Z axis.
+*/
+
+#title {
+    padding: 0;
+    text-align: center;
+    width:780px;
+}
+
+#title h1 {
+    font-size: 120px;
+}
+
+#title h2 {
+    font-size: 64px;
+}
+
+#title .footnote {
+    font-size: 32px;
+}
+
+#technology {
+    text-align: center;
+}
+
+#technology p img {
+    height:70px;
+    margin: 20px;
+}
+
+#sources p {
+    font-size:12px;
+}
+
+#sources p.title {
+    padding-top:30px;
+}
+
+#sources h1 {
+    font-size:40px;
+    text-align:left;
+}
+
+#sources .title {
+    font-weight: bold;
+    font-size:20px;
+}
+
+#questions h1 {
+    font-size:220px;
+}
+
+#questions p {
+    font-size:40px;
+    font-style: italic;
+    opacity:0.5;
+}
+#questions h {
+    font-size:20px;
+    font-style: italic;
+    opacity: 0.2;
+}
+
+
+.actor {
+    float:left;
+    width:70px;
+    border:1px solid black;
+    font-size:30px;
+    text-align:center;
+    margin-left:20px;
+    margin-top:20px;
+    padding:10px;
+}
+
+.actor img {
+    height:80px;
+}
+
+.actors {
+    float:left;
+    width:390px;
+    border:1px solid black;
+    font-size:37px;
+    text-align:center;
+    margin:20px;
+    padding:10px;
+}
+
+.actors img {
+    height:40px;
+}
+
+.monolith {
+    width:600px;
+}
+
+.api {
+    background-color: white;
+    -webkit-border-radius: 11px;
+    -moz-border-radius:    11px;
+    border-radius:         11px;
+    border: 1px solid black;
+    padding:5px;
+    font-size:40px;
+    text-align: center;
+}
+
+.ingridients img {
+    height: 100px;
+}
+
+.cloud {
+    background-image: url('../img/cloud.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 2%;
+    height: 40px;
+    margin: 15px;
+}
+
+.cloud img {
+    height:70px; 
+    margin-left:40px;
+}
+
+
+.cloud-big {
+    background-image: url('../img/cloud.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 20px;
+    height: 240px;
+    margin: 15px;
+}
+
+
+.cloud-big img {
+    height: 60px;
+}
+
+.cloud-big p {
+    margin-left: 50px;
+}
+
+#overview {
+    display:none;
+}
+
+.impress-on-overview .step {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.impress-enabled          { pointer-events: none }
+.impress-enabled #impress { pointer-events: auto }

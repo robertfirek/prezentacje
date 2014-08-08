@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Architektura mikroserwisów | Nowe szaty cesarza | by Robert Firek @robertfirek</title>
+
+    <meta name="description" content="Wprowadzenie do architektury opartej o mikroserwisy." />
+    <meta name="author" content="Robert Firek" />
+
+    <link href="http://fonts.googleapis.com/css?family=Audiowide&subset=latin,latin-ext" rel='stylesheet' type='text/css'>
+
+    <link href="css/impress.css" rel="stylesheet" />
+    <link href="css/box.css" rel="stylesheet" />
+    <link href="css/arrow.css" rel="stylesheet" />
+
+</head>
+
+<body class="impress-not-supported">
+
+    <div class="fallback-message">
+        <p>Your browser
+            <b>doesn't support the features required</b>by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest
+            <b>Chrome</b>,
+            <b>Safari</b>or
+            <b>Firefox</b>browser.</p>
+    </div>
+
+
+    <div id="impress">
+
+
+        <div id="title" class="step" data-x="0" data-y="0" data-scale="2">
+            <h1>Architektura mikroserwisów</h1>
+            <h2>Nowe szaty cesarza</h2>
+            <span class="footnote">@RobertFirek</span>
+        </div>
+
+
+        <div id="monolith" class="step monolith" data-x="1850" data-y="1000" data-scale="2">
+            <h1>Monolit</h1>
+            <div class="box big">
+            </div>
+        </div>
+
+
+        <div id="ingridients" class="step monolith" data-x="2850" data-y="2000" data-scale="2">
+            <h1>Struktura</h1>
+            <div class="box big ingridients">
+                <p>
+                    <img src="img/model.png" />
+                    <img src="img/logic.png" />
+                </p>
+                <p>
+                    <img src="img/db.png" />
+                    <img src="img/gui.png" />
+                    <span class="api">API</span>
+                </p>
+            </div>
+        </div>
+
+
+        <div id="ingridients-conway" class="step monolith" data-x="3850" data-y="3000" data-scale="2">
+            <h1>Organizacja</h1>
+            <div class="box big ingridients">
+                <p>
+                    <img src="img/model.png" />
+                    <img src="img/logic.png" />
+                </p>
+                <p>
+                    <img src="img/db.png" />
+                    <img src="img/gui.png" />
+                    <span class="api">API</span>
+                </p>
+            </div>
+            <div class="actor">
+                <p>UI</p>
+                <img src="img/actor.png" />
+            </div>
+            <div class="actor">
+                <p>Dev</p>
+                <img src="img/actor.png" />
+            </div>
+            <div class="actor">
+                <p>Ops</p>
+                <img src="img/actor.png" />
+            </div>
+            <div class="actor">
+                <p>DBA</p>
+                <img src="img/actor.png" />
+            </div>
+        </div>
+
+
+        <div id="monolith_scalability" class="step " data-x="5250" data-y="4500" data-scale="2">
+            <h1>Skalowalność</h1>
+            <div class="box box-scalability ">
+                <div class="box scalability-big">
+                </div>
+            </div>
+            <div class="box box-scalability ">
+                <div class="box scalability-big ">
+                </div>
+            </div>
+            <div class="box box-scalability ">
+                <div class="box scalability-big ">
+                </div>
+            </div>
+        </div>
+
+        <div id="monolith_scalability_vm" class="step " data-x="5250" data-y="4500" data-scale="2">
+            <h1>Skalowalność</h1>
+            <div class="box box-scalability " style="width:360px;">
+                <div class="box scalability-big">
+                </div>
+                <div class="box scalability-big ">
+                </div>
+            </div>
+            <div class="box box-scalability ">
+                <div class="box scalability-big ">
+                </div>
+            </div>
+        </div>
+
+        <div id="evolution" class="step monolith" data-x="6350" data-y="5500" data-scale="2">
+            <h1>Ewolucja</h1>
+            <div class="box big">
+                <div class="cloud"></div>
+                <div class="cloud"></div>
+                <div class="cloud"></div>
+            </div>
+        </div>
+
+
+        <div id="split" class="step monolith" data-x="-1600" data-y="1000" data-scale="2">
+            <h1>Mikroserwisy</h1>
+            <div class="box box-white">
+                <div class="box medium">
+                    <div class="cloud"></div>
+                </div>
+                <div class="triangle-down triangle-down-white"></div>
+                <div class="box medium">
+                    <div class="cloud"></div>
+                </div>
+                <div class="triangle-down triangle-down-white"></div>
+                <div class="box medium">
+                    <div class="cloud"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="split_connections" class="step monolith" data-x="-1600" data-y="1000" data-scale="2">
+            <h1>Mikroserwisy</h1>
+            <div class="box box-white">
+                <div class="box medium">
+                    <div class="cloud"></div>
+                </div>
+                <div class="triangle-down triangle-down-green blink_me"></div>
+                <div class="box medium">
+                    <div class="cloud"></div>
+                </div>
+                <div class="triangle-down triangle-down-green blink_me"></div>
+                <div class="box medium">
+                    <div class="cloud"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="split_ready_for_failure" class="step monolith" data-x="-1600" data-y="1000" data-scale="2">
+            <h1>Mikroserwisy</h1>
+            <div class="box box-white">
+                <div class="box medium">
+                    <div class="cloud"></div>
+                </div>
+                <div class="triangle-down blink_me triangle-down-red"></div>
+                <div class="box medium">
+                    <div class="cloud"></div>
+                </div>
+                <div class="triangle-down blink_me triangle-down-red"></div>
+                <div class="box medium">
+                    <div class="cloud"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="split_monitoring" class="step monolith" data-x="-1600" data-y="1000" data-scale="2">
+            <h1>Mikroserwisy</h1>
+            <div class="box box-white">
+                <div class="box medium">
+                    <div class="cloud">
+                        <img src="img/monitor.png" />
+                    </div>
+                </div>
+                <div class="triangle-down blink_me triangle-down-red"></div>
+                <div class="box medium">
+                    <div class="cloud">
+                        <img src="img/monitor.png" />
+                    </div>
+                </div>
+                <div class="triangle-down blink_me triangle-down-red"></div>
+                <div class="box medium">
+                    <div class="cloud">
+                        <img src="img/monitor.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="microservice_structure" class="step monolith" data-x="-3850" data-y="2000" data-z="-2000" data-scale="2">
+            <h1>Struktura</h1>
+            <div class="box structure">
+                <div class="cloud-big">
+                    <div style="padding-top:46px">
+                        <p>
+                            <img src="img/model.png" />
+                            <img src="img/logic.png" />
+                            <span class="api">API</span>
+                        </p>
+                        <p>
+                            <img src="img/db.png" />
+                            <img src="img/gui.png" />
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="microservice_structure_java" class="step monolith" data-x="-3850" data-y="2000" data-z="-2000" data-scale="2">
+            <h1>Struktura</h1>
+            <div class="box structure">
+                <div class="cloud-big">
+                    <div style="padding-top:46px">
+                        <p>
+                            <img src="img/model.png" />
+                            <img src="img/logic.png" />
+                            <span class="api">API</span>
+                        </p>
+                        <p>
+                            <img src="img/db.png" />
+                            <img src="img/gui.png" />
+                            <img src="img/java.jpg" />
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="microservice_structure_ruby" class="step monolith" data-x="-3850" data-y="2000" data-z="-2000" data-scale="2">
+            <h1>Struktura</h1>
+            <div class="box structure">
+                <div class="cloud-big">
+                    <div style="padding-top:46px">
+                        <p>
+                            <img src="img/model.png" />
+                            <img src="img/logic.png" />
+                            <span class="api">API</span>
+                        </p>
+                        <p>
+                            <img src="img/cloud.png" style="width:70px;" />
+                            <img src="img/gui.png" />
+                            <img src="img/ruby.png" />
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="microservice_structure_api_versioning" class="step monolith" data-x="-3850" data-y="2000" data-z="-2000" data-scale="2">
+            <h1>Struktura</h1>
+            <div class="box structure">
+                <div class="cloud-big">
+                    <div style="padding-top:46px">
+                        <p>
+                            <span class="api">API 1.0</span>
+                        </p>
+                        <p>
+                            <span class="api">API 2.0</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="microservices_scalability" class="step " data-x="-4250" data-y="3500" data-z="1000" data-scale="2">
+            <h1>Skalowalność</h1>
+            <div class="box box-scalability ">
+                <div class="box scalability scalability-red">
+                    <div class="cloud"></div>
+                </div>
+                <div class="box scalability scalability-green">
+                    <div class="cloud"></div>
+                </div>
+            </div>
+            <div class="box box-scalability ">
+                <div class="box scalability scalability-red">
+                    <div class="cloud"></div>
+                </div>
+                <div class="box scalability">
+                    <div class="cloud"></div>
+                </div>
+                <div class="box scalability scalability-red">
+                    <div class="cloud"></div>
+                </div>
+            </div>
+            <div class="box box-scalability ">
+                <div class="box scalability scalability-green">
+                    <div class="cloud"></div>
+                </div>
+                <div class="box scalability">
+                    <div class="cloud"></div>
+                </div>
+            </div>
+            <div class="box box-scalability ">
+                <div class="box scalability scalability-green">
+                    <div class="cloud"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="microservice_conway" class="step " data-x="-5850" data-y="4500" data-z="1000" data-scale="2">
+            <h1>Organizacja</h1>
+            <div class="box structure-smaller">
+                <div class="cloud">
+                </div>
+            </div>
+            <div class="actors">
+                <p>UI + DevOps + DBA</p>
+                <img src="img/actor.png" />
+                <img src="img/actor.png" />
+                <img src="img/actor.png" />
+                <img src="img/actor.png" />
+            </div>
+            <div class="box structure-smaller">
+                <div class="cloud">
+                </div>
+            </div>
+            <div class="actors">
+                <p>UI + DevOps + DBA</p>
+                <img src="img/actor.png" />
+                <img src="img/actor.png" />
+                <img src="img/actor.png" />
+                <img src="img/actor.png" />
+            </div>
+        </div>
+
+
+        <div id="microservice_agile" class="step " data-x="-5850" data-y="4500" data-z="1000" data-scale="2">
+            <h1>Organizacja</h1>
+            <div class="box structure-smaller">
+                <div class="cloud">
+                </div>
+            </div>
+            <div class="actors">
+                <p>Agile</p>
+                <img src="img/actor.png" />
+                <img src="img/actor.png" />
+                <img src="img/actor.png" />
+                <img src="img/actor.png" />
+                <img src="img/actor.png" />
+                <img src="img/actor.png" />
+                <img src="img/actor.png" />
+                <img src="img/actor.png" />
+            </div>
+            <div class="box structure-smaller">
+                <div class="cloud">
+                </div>
+            </div>
+            <div class="actors">
+                <p>Agile</p>
+                <img src="img/actor.png" />
+                <img src="img/actor.png" />
+                <img src="img/actor.png" />
+                <img src="img/actor.png" />
+                <img src="img/actor.png" />
+                <img src="img/actor.png" />
+                <img src="img/actor.png" />
+                <img src="img/actor.png" />
+            </div>
+        </div>
+
+        <div id="technology" class="step" data-x="0" data-y="6000" data-scale="4">
+            <p>
+                <img src="img/logo/VMware_logo.jpg" />
+                <img src="img/logo/virtualbox_logo.jpg" />
+                <img src="img/logo/open_stack_logo.jpg" />
+            </p>
+            <p>
+                <img src="img/logo/vagrant_logo.jpg" />
+                <img src="img/logo/docker_logo.jpg" />
+                <img src="img/logo/chef.jpg" />
+                <img src="img/logo/puppet_logo2.png" />
+            </p>
+            <p>
+                <img src="img/logo/elasticsearch.png" />
+                <img src="img/logo/Netflix_OSS_Logo.jpg" />
+                <img src="img/logo/spring_boot_logo.png" />
+            </p>
+        </div>
+
+
+        <div id="questions" class="step" data-x="0" data-y="4000" data-scale="4">
+            <p>Complexity is your enemy. Any fool can make something complicated. It is hard to make something simple.</p>
+            <h>Richard Branson</h>
+            <h1>?</h1>
+        </div>
+
+        <div id="sources" class="step" data-x="0" data-y="4000" data-z="-1000" data-scale="1">
+            <h1>Źródła</h1>
+            <p class="title">Microservices</p>
+            <p>http://martinfowler.com/articles/microservices.html</p>
+            <p class="title">Micro Services: Java, the Unix Way</p>
+            <p>http://www.infoq.com/presentations/Micro-Services</p>
+            <p class="title">Micro Service Architecture</p>
+            <p>http://yobriefca.se/blog/2013/04/28/micro-service-architecture/</p>
+            <p class="title">An Introduction to Designing and Building Antifragile Microservices with Java</p>
+            <p>https://skillsmatter.com/meetups/6335-an-introduction-to-designing-and-building-antifragile-microservices-with-java</p>
+
+        </div>
+
+
+        <div id="overview" class="step" data-x="0" data-y="3000" data-scale="12">
+        </div>
+
+    </div>
+
+    <script src="js/impress.js"></script>
+    <script>
+        impress().init();
+    </script>
+
+</body>
+
+</html>
