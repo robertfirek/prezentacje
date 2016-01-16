@@ -1,0 +1,105 @@
+
+@font-face {
+    font-family: 'fff_tusj';
+    src: url('fonts/FFF_Tusj/FFF_Tusj.eot');
+    src: url('fonts/FFF_Tusj/FFF_Tusj.eot?#iefix') format('embedded-opentype'),
+         url('fonts/FFF_Tusj/FFF_Tusj.woff') format('woff'),
+         url('fonts/FFF_Tusj/FFF_Tusj.ttf') format('truetype'),
+         url('fonts/FFF_Tusj/FFF_Tusj.svg#fff_tusjbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-size: 200%;
+    text-align: center;
+    font-family: fff_tusj;
+    letter-spacing: 5px;
+}
+
+p {
+    font-size: 125%;
+    font-weight: normal;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+}
+
+em {
+    font-size: 142%;
+}
+
+strong {
+    font-size: 127%;
+    letter-spacing: -2px;
+}
+
+h1, h2, h3, h4 {
+    font-weight: normal;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+}
+
+ul {
+    list-style-position: inside;
+    text-align: left;
+}
+
+li {
+    font-size: 125%;
+    font-family: fff_tusj;
+    font-weight: normal;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+    padding-left: 0.3em;
+    line-height: 1.8em;
+    list-style-type: disc;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.step {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.codurance-logo {
+    height: 80px;
+    width: auto;
+}
+
+#microservices_definition li {
+    font-size: 87%;
+}
+
+.aws-console {
+    width: 800px;
+    height: auto;
+}
+
+.multiple-env {
+    width: 950px;
+    height: auto;
+}
+
+.proxy-type {
+    width:700px;
+    height: auto;
+}
+
+.monitoring {
+    width:700px;
+    height: auto;
+}
+
+#questions h1 {
+    font-size:500%;
+}
